@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Pull Request Template",
+  "version": "1.0.0",
+
+  "description": "This will paste a pull request template into the pull request form",
+  "icons": {
+  	"32": "icon32.png",
+  	"48": "icon48.png",
+  	"128": "icon128.png"
+  },
+
+  "page_action": {
+  	"default_icon": {
+  		"19": "icon19.png",
+  		"38": "icon38.png"
+		},
+  	"default_title": "Pull Request Template"
+	},
+
+  "author": "Marshall Smith",
+	"content_scripts": [
+    {
+      "matches": ["https://github.com/*compare*"],
+      "js": ["script.js"]
+    }
+  ],
+  "offline_enabled": false,
+  "permissions": [
+    "activeTab"
+	]
+}
